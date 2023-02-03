@@ -20,7 +20,6 @@ function wait_pending_trannsactions {
 	while(true); do
 	if [ $(ironfish wallet:transactions | grep -E "pending|unconfirmed" | wc -l) -eq 0 ]; then
    		echo "have NO pending or unconfirmed transactions";
-  		exit 0
 	else
    		echo 'waiting .... 1m'
    		sleep 1m
